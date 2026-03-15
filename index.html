@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sivanand K | Portfolio</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f7f9fc;
+color:#2d3436;
+line-height:1.6;
+}
+
+/* NAVBAR */
+
+nav{
+position:sticky;
+top:0;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 60px;
+background:rgba(15,23,42,0.9);
+backdrop-filter:blur(10px);
+color:white;
+z-index:1000;
+}
+
+nav h3{
+font-size:20px;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+nav a{
+color:#e5e7eb;
+text-decoration:none;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#38bdf8;
+}
+
+/* HERO */
+
+.hero{
+padding:100px 20px;
+text-align:center;
+background:linear-gradient(135deg,#0f172a,#1e293b);
+color:white;
+}
+
+.profile-photo{
+width:160px;
+height:160px;
+border-radius:50%;
+object-fit:cover;
+border:5px solid #38bdf8;
+margin-bottom:20px;
+}
+
+.hero h1{
+font-size:42px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:20px;
+color:#cbd5f5;
+}
+
+/* SECTION */
+
+section{
+max-width:1100px;
+margin:auto;
+padding:70px 20px;
+}
+
+h2{
+font-size:28px;
+margin-bottom:25px;
+border-left:5px solid #38bdf8;
+padding-left:12px;
+}
+
+/* SKILLS */
+
+.skills{
+display:flex;
+flex-wrap:wrap;
+gap:12px;
+}
+
+.skill{
+background:#e2e8f0;
+padding:8px 15px;
+border-radius:20px;
+transition:0.3s;
+}
+
+.skill:hover{
+background:#38bdf8;
+color:white;
+}
+
+/* PROJECTS */
+
+.project-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.project-card{
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 6px 15px rgba(0,0,0,0.08);
+transition:0.35s;
+border-top:4px solid #38bdf8;
+}
+
+.project-card:hover{
+transform:translateY(-8px);
+box-shadow:0 12px 25px rgba(0,0,0,0.15);
+}
+
+.project-icon{
+font-size:30px;
+color:#38bdf8;
+margin-bottom:10px;
+}
+
+.project-buttons{
+margin-top:15px;
+}
+
+.btn{
+padding:8px 16px;
+background:#0f172a;
+color:white;
+text-decoration:none;
+border-radius:6px;
+font-size:14px;
+transition:0.3s;
+display:inline-flex;
+align-items:center;
+gap:6px;
+}
+
+.btn:hover{
+background:#38bdf8;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:25px;
+background:#0f172a;
+color:#cbd5f5;
+margin-top:40px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+nav{
+flex-direction:column;
+gap:10px;
+padding:15px;
+}
+
+.hero h1{
+font-size:30px;
+}
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<h3>Sivanand K</h3>
+
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+<li><a href="https://github.com/Sivanandsureshbabu" target="_blank">GitHub</a></li>
+<li><a href="https://www.linkedin.com/in/sivanandsureshbabu" target="_blank">LinkedIn</a></li>
+</ul>
+
+</nav>
+
+
+<!-- HERO -->
+
+<div class="hero">
+
+<img src="photo.jpeg" class="profile-photo">
+
+<h1>Hi, I'm Sivanand</h1>
+
+<p><span id="typing"></span></p>
+
+</div>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<h2>About Me</h2>
+
+<p>
+Hi, I’m a BCA student with a strong interest in technology and problem solving. I enjoy learning about areas such as cybersecurity, networking, and software development. Throughout my academic journey, I have focused on building my technical knowledge and improving my skills through practical learning and projects. I am always curious to explore new technologies and understand how systems work. My goal is to build a successful career in the IT industry where I can continue learning, develop innovative solutions, and contribute to meaningful technological advancements.</p>
+
+</section>
+
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+<h2>Skills</h2>
+
+<h3>Languages</h3>
+<div class="skills">
+<div class="skill">C++</div>
+<div class="skill">Python</div>
+<div class="skill">HTML</div>
+<div class="skill">CSS</div>
+<div class="skill">JavaScript</div>
+</div>
+
+<br>
+
+<h3>Databases</h3>
+<div class="skills">
+<div class="skill">PostgreSQL</div>
+<div class="skill">MySQL</div>
+</div>
+
+<br>
+
+<h3>Frameworks</h3>
+<div class="skills">
+<div class="skill">Django</div>
+<div class="skill">FastAPI</div>
+</div>
+
+<br>
+
+<h3>Tools</h3>
+<div class="skills">
+<div class="skill">Linux</div>
+<div class="skill">GitHub</div>
+<div class="skill">VS Code</div>
+<div class="skill">Postman</div>
+<div class="skill">Nmap</div>
+<div class="skill">Burp Suite</div>
+<div class="skill">Wireshark</div>
+</div>
+
+</section>
+
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+<h2>Projects</h2>
+
+<div class="project-grid" id="projectContainer"></div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<h2>Contact</h2>
+
+<p>Email: sivanandsureshbabu@gmail.com</p>
+<p>Kannur, Kerala, India</p>
+<p>+91 9074944832</p>
+<p><a href="https://www.linkedin.com/in/sivanandsureshbabu" target="_blank">LinkedIn  | </a><a href="https://github.com/Sivanandsureshbabu" target="_blank"> GitHub</a> 
+</p>
+
+</section>
+
+
+<footer>
+
+<p>©  Sivanand K</p>
+
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+<script>
+
+new Typed("#typing", {
+strings:[
+"Software Developer",
+"Web Developer",
+"Cybersecurity Enthusiast",
+"BCA Student"
+
+],
+typeSpeed:60,
+backSpeed:40,
+loop:true
+});
+
+const projects = [
+
+{
+title:"Global Flight Traffic Heatmap",
+icon:"fa-plane",
+github:"https://github.com/Sivanandsureshbabu/global-traffic-heatmap",
+desc:"A data visualization project that analyzes global flight traffic using aviation datasets and displays flight density through an interactive heatmap."
+},
+
+{
+title:"Student Academic Management System",
+icon:"fa-graduation-cap",
+github:"https://github.com/Sivanandsureshbabu/React-Django-Institute-Management-App",
+desc:"A full stack system built using Django, React, and PostgreSQL to manage student academic records and activities."
+},
+
+{
+title:"Kerala Tourism Website",
+icon:"fa-map-location-dot",
+github:"#",
+desc:"A responsive tourism website showcasing major destinations across Kerala built with HTML and CSS."
+},
+
+{
+title:"RAG FitnessBot",
+icon:"fa-robot",
+github:"https://github.com/Sivanandsureshbabu/fitcoach-RAG",
+desc:"An AI chatbot that generates personalized workout and diet plans using Retrieval-Augmented Generation."
+},
+
+{
+title:"Cloud Student Records System",
+icon:"fa-cloud",
+github:"#",
+desc:"A FastAPI backend deployed on AWS EC2 connected to PostgreSQL RDS supporting API-based student record management."
+},
+
+{
+title:"Email Bot Automation",
+icon:"fa-envelope",
+github:"#",
+desc:"A Python automation script that filters incoming emails and sends automated responses."
+}
+
+];
+
+const container = document.getElementById("projectContainer");
+
+projects.forEach(project => {
+
+const card = document.createElement("div");
+
+card.classList.add("project-card");
+
+card.innerHTML = `
+<i class="fa-solid ${project.icon} project-icon"></i>
+<h3>${project.title}</h3>
+<p>${project.desc}</p>
+
+<div class="project-buttons">
+<a href="${project.github}" target="_blank" class="btn">
+<i class="fa-brands fa-github"></i> GitHub
+</a>
+</div>
+`;
+
+container.appendChild(card);
+
+});
+
+</script>
+
+</body>
+</html>
