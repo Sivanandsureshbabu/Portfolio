@@ -153,6 +153,9 @@ margin-bottom:10px;
 
 .project-buttons{
 margin-top:15px;
+display:flex;
+gap:10px;
+flex-wrap:wrap;
 }
 
 .btn{
@@ -202,7 +205,6 @@ font-size:30px;
 
 </head>
 
-
 <body>
 
 <!-- NAVBAR -->
@@ -222,7 +224,6 @@ font-size:30px;
 
 </nav>
 
-
 <!-- HERO -->
 
 <div class="hero">
@@ -235,7 +236,6 @@ font-size:30px;
 
 </div>
 
-
 <!-- ABOUT -->
 
 <section id="about">
@@ -243,10 +243,10 @@ font-size:30px;
 <h2>About Me</h2>
 
 <p>
-Hi, I’m a BCA student with a strong interest in technology and problem solving. I enjoy learning about areas such as cybersecurity, networking, and software development. Throughout my academic journey, I have focused on building my technical knowledge and improving my skills through practical learning and projects. I am always curious to explore new technologies and understand how systems work. My goal is to build a successful career in the IT industry where I can continue learning, develop innovative solutions, and contribute to meaningful technological advancements.</p>
+Hi, I’m a BCA student with a strong interest in technology and problem solving. I enjoy learning about areas such as cybersecurity, networking, and software development. My goal is to build a successful career in IT and create impactful solutions.
+</p>
 
 </section>
-
 
 <!-- SKILLS -->
 
@@ -296,17 +296,12 @@ Hi, I’m a BCA student with a strong interest in technology and problem solving
 
 </section>
 
-
 <!-- PROJECTS -->
 
 <section id="projects">
-
 <h2>Projects</h2>
-
 <div class="project-grid" id="projectContainer"></div>
-
 </section>
-
 
 <!-- CONTACT -->
 
@@ -317,18 +312,17 @@ Hi, I’m a BCA student with a strong interest in technology and problem solving
 <p>Email: sivanandsureshbabu@gmail.com</p>
 <p>Kannur, Kerala, India</p>
 <p>+91 9074944832</p>
-<p><a href="https://www.linkedin.com/in/sivanandsureshbabu" target="_blank">LinkedIn  | </a><a href="https://github.com/Sivanandsureshbabu" target="_blank"> GitHub</a> 
+
+<p>
+<a href="https://www.linkedin.com/in/sivanandsureshbabu" target="_blank">LinkedIn</a> |
+<a href="https://github.com/Sivanandsureshbabu" target="_blank">GitHub</a>
 </p>
 
 </section>
 
-
 <footer>
-
-<p>©  Sivanand K</p>
-
+<p>© Sivanand K</p>
 </footer>
-
 
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
@@ -340,7 +334,6 @@ strings:[
 "Web Developer",
 "Cybersecurity Enthusiast",
 "BCA Student"
-
 ],
 typeSpeed:60,
 backSpeed:40,
@@ -353,43 +346,43 @@ const projects = [
 title:"Global Flight Traffic Heatmap",
 icon:"fa-plane",
 github:"https://github.com/Sivanandsureshbabu/global-traffic-heatmap",
-desc:"A data visualization project that analyzes global flight traffic using aviation datasets and displays flight density through an interactive heatmap."
+desc:"A data visualization project that analyzes global flight traffic using an interactive heatmap."
 },
 
 {
 title:"Student Academic Management System",
 icon:"fa-graduation-cap",
 github:"https://github.com/Sivanandsureshbabu/React-Django-Institute-Management-App",
-desc:"A full stack system built using Django, React, and PostgreSQL to manage student academic records and activities."
+desc:"A full stack system built using Django, React, and PostgreSQL."
 },
 
 {
 title:"Kerala Tourism Website",
 icon:"fa-map-location-dot",
 github:"https://github.com/Sivanandsureshbabu/kerala-web",
-View :"https://sivanandsureshbabu.github.io/kerala-web/"
-desc:"A responsive tourism website showcasing major destinations across Kerala built with HTML and CSS."
+view:"https://sivanandsureshbabu.github.io/kerala-web/",
+desc:"A responsive tourism website showcasing Kerala destinations."
 },
 
 {
 title:"RAG FitnessBot",
 icon:"fa-robot",
 github:"https://github.com/Sivanandsureshbabu/fitcoach-RAG",
-desc:"An AI chatbot that generates personalized workout and diet plans using Retrieval-Augmented Generation."
+desc:"An AI chatbot generating workout and diet plans."
 },
 
 {
 title:"Cloud Student Records System",
 icon:"fa-cloud",
 github:"#",
-desc:"A FastAPI backend deployed on AWS EC2 connected to PostgreSQL RDS supporting API-based student record management."
+desc:"FastAPI backend deployed on AWS EC2 with PostgreSQL RDS."
 },
 
 {
 title:"Email Bot Automation",
 icon:"fa-envelope",
 github:"#",
-desc:"A Python automation script that filters incoming emails and sends automated responses."
+desc:"Python automation for email filtering and responses."
 }
 
 ];
@@ -399,7 +392,6 @@ const container = document.getElementById("projectContainer");
 projects.forEach(project => {
 
 const card = document.createElement("div");
-
 card.classList.add("project-card");
 
 card.innerHTML = `
@@ -408,9 +400,17 @@ card.innerHTML = `
 <p>${project.desc}</p>
 
 <div class="project-buttons">
+
 <a href="${project.github}" target="_blank" class="btn">
 <i class="fa-brands fa-github"></i> GitHub
 </a>
+
+${project.view ? `
+<a href="${project.view}" target="_blank" class="btn">
+<i class="fa-solid fa-up-right-from-square"></i> Live Demo
+</a>
+` : ""}
+
 </div>
 `;
 
